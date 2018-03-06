@@ -1,28 +1,29 @@
-package lab;
+package assignmentTwo;
 
 public class Employee {
+	// static? private?
+	public String employeeID = "0";
+	public String name = "name";
+	public String emailAddress = "address@gmail.com";
 	
-	public Employee() {
-		this.employeeID = "42";
-		this.name = "Kalina";
-		this.email_address = "k.blonska@gmail.com";
+
+	public Employee(String employeeId, String name, String emailAddress) {
+		this.employeeID = employeeId;
+		this.name = name;
+		this.emailAddress = emailAddress;
 	}
-
-
-	private String employeeID;
-	private String name;
-	private String email_address;
-
 	
+	public Employee() {}
+
+
+	@Override
 	public String toString() {
 		
-		String s = employeeID;
-		s += "\n";
-		s +=  name;
-		s +=  "\n";
-		s += email_address;
-
-		return s;
+		return employeeID 
+				+ "\n" 
+				+ name 
+				+ "\n" 
+				+ emailAddress;
 	}
 	
 	
@@ -39,16 +40,16 @@ public class Employee {
 		this.name = name;
 	}
 	public String getEmail_address() {
-		return email_address;
+		return emailAddress;
 	}
 	public void setEmail_address(String email_address) {
-		this.email_address = email_address;
+		this.emailAddress = email_address;
 	}
 	
 	
 	public static void main(String[] args) {
-		Employee em = new Employee();
+		Employee em = new Employee("42", "Harry Potter", "hpotter@hogwarts.gmail");
 		System.out.println(em);
 	}
-
+	 
 }
