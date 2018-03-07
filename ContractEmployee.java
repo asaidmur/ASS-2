@@ -1,52 +1,49 @@
-package assignmentTwo;
-
 public class ContractEmployee extends Employee {
 
 	//should data members contain value?
-	public String hourlyPay = "$10.25";
-
-	public String hours = "40";
+	private int hourlyPay;
+	private int hours;
 
 	public ContractEmployee() {
+		this.hourlyPay = 10;
+		this.hours = 40;
 	}
 
-	// is it ok to initialize parent class and child class in same constructor?
-	public ContractEmployee(String employeeId, String name, String emailAddress, String hourlyPay, String hours) {
+	public ContractEmployee(String employeeId, String name, String emailAddress, int hourlyPay, int hours) {
 
 		super(employeeId, name, emailAddress);
 		this.hourlyPay = hourlyPay;
 		this.hours = hours;
-
 	}
 
-	public ContractEmployee(String employeeId, String name, String emailAddress) {
-		super(employeeId, name, emailAddress);
-	}
-
-	public ContractEmployee(String hourlyPay, String hours) {
+	public ContractEmployee(int hourlyPay, int hours) {
 		this.hourlyPay = hourlyPay;
 		this.hours = hours;
 	}
 
-	public String getHourlyPay() {
+	public int getHourlyPay() {
 		return hourlyPay;
 	}
 
-	public void setHourlyPay(String hourlyPay) {
+	public void setHourlyPay(int hourlyPay) {
 		this.hourlyPay = hourlyPay;
 	}
 
-	public String getHours() {
+	public int getHours() {
 		return hours;
 	}
 
-	public void setHours(String hours) {
+	public void setHours(int hours) {
 		this.hours = hours;
 	}
 
 	public String toString() {
-
-		return hourlyPay + "\n" + hours;
+		return hourlyPay + ", " + hours;
+	}
+	
+	public static void main(String[] args) {
+		ContractEmployee contr = new ContractEmployee();
+		System.out.println(contr.toString());
 	}
 
 }

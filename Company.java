@@ -1,5 +1,3 @@
-package assignmentTwo;
-
 import java.util.Arrays;
 
 public class Company {
@@ -25,12 +23,12 @@ public class Company {
 		this.fullTimeArray = fullTimeArray;
 	}
 
-	public ContractEmployee[] getContractArrayt() {
+	public ContractEmployee[] getContractArray() {
 		return contractArray;
 	}
 
-	public void setContractArrayt(ContractEmployee[] contractArrayt) {
-		this.contractArray = contractArrayt;
+	public void setContractArray(ContractEmployee[] contractArray) {
+		this.contractArray = contractArray;
 	}
 
 	public int getNumberOfEmployees() {
@@ -49,8 +47,27 @@ public class Company {
 				+ ", numberOfEmployees=" 	+ numberOfEmployees + "]";
 	}
 
-	
-	
+	public static void main(String[] args) {
+
+		FullTimeEmployee[] fullTimeArr = new FullTimeEmployee[3];
+		ContractEmployee[] contractArr = new ContractEmployee[3];
+
+		for (int i = 0; i < 3; i++) {
+			FullTimeEmployee fullTime = new FullTimeEmployee(i);
+			fullTimeArr[i] = fullTime;
+			ContractEmployee contract = new ContractEmployee(10-i, 10+i);
+			contractArr[i] = contract;
+			
+			System.out.println("fullTime: " + fullTime.toString());
+			System.out.println("contract: " + contract.toString());
+			
+		}
+		Company co = new Company();
+		co.setFullTimeArray(fullTimeArr);
+		co.setContractArray(contractArr);
+		co.setNumberOfEmployees(99);
+		System.out.println(co.toString());
+	}
 	
 	
 }

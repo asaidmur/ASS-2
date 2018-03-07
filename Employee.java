@@ -1,10 +1,8 @@
-package assignmentTwo;
-
 public class Employee {
-	// static? private?
-	public String employeeID = "0";
-	public String name = "name";
-	public String emailAddress = "address@gmail.com";
+
+	private String employeeID = "0";
+	private String name = "name";
+	private String emailAddress = "address@gmail.com";
 	
 
 	public Employee(String employeeId, String name, String emailAddress) {
@@ -39,13 +37,12 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getEmail_address() {
+	public String getEmailAddress() {
 		return emailAddress;
 	}
-	public void setEmail_address(String email_address) {
-		this.emailAddress = email_address;
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
-	
 	
 	public static void main(String[] args) {
 		Employee em = new Employee("42", "Harry Potter", "hpotter@hogwarts.gmail");
