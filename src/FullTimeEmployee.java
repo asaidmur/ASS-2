@@ -1,6 +1,6 @@
 public class FullTimeEmployee extends Employee {
 
-	public int salary = 0;
+	private int salary = 0;
 
 	public FullTimeEmployee(String employeeId, String name, String emailAddress) {
 		super(employeeId, name, emailAddress);
@@ -22,18 +22,10 @@ public class FullTimeEmployee extends Employee {
 	}
 
 	public String toString() {
-		return String.valueOf(salary);
+		String employee = super.toString();
+		String fulltime = "salary: " + String.valueOf(salary) + "\n";
+		return employee += fulltime;
+
 	}
 
-	// don't think this is necessary, but it looks cool I guess
-	public String getSuperString() {
-		return super.toString();
-	}
-
-	public static void main(String[] args) {
-		FullTimeEmployee em = new FullTimeEmployee("42", "Hermione", "magic_lover92@hotmail.com");
-		em.setSalary(100000);
-		System.out.println(em);
-		System.out.println(em.getSuperString());
-	}
 }

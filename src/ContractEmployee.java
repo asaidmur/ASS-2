@@ -1,12 +1,11 @@
 public class ContractEmployee extends Employee {
 
-	//should data members contain value?
 	private int hourlyPay;
 	private int hours;
 
 	public ContractEmployee() {
-		this.hourlyPay = 10;
-		this.hours = 40;
+		this.hourlyPay = 0;
+		this.hours = 0;
 	}
 
 	public ContractEmployee(String employeeId, String name, String emailAddress, int hourlyPay, int hours) {
@@ -37,13 +36,11 @@ public class ContractEmployee extends Employee {
 		this.hours = hours;
 	}
 
+	@Override
 	public String toString() {
-		return hourlyPay + ", " + hours;
-	}
-	
-	public static void main(String[] args) {
-		ContractEmployee contr = new ContractEmployee();
-		System.out.println(contr.toString());
+		String employee = super.toString();
+		String contractor = "hourly pay: " + hourlyPay + ", hours: " + hours + "\n";
+		return employee += contractor;
 	}
 
 }
