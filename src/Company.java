@@ -1,4 +1,13 @@
-import java.util.Arrays;
+/********************************************
+ * 											*
+ * 	Ardasher Saidmuradov						*
+ * 	300286501								*
+ * 	CSIS 1275								*
+ *	Assignment 2								*
+ *	submission no: 							*
+ *	9bc74b02-cf33-488c-9432-ecb8dd1e6508		*
+ * 											*
+ ********************************************/
 
 public class Company {
 
@@ -83,7 +92,7 @@ public class Company {
 		fullTime.setName(contractArr[0].getName());
 		fullTimeArr = new FullTimeEmployee[] {fullTime};
 		Company co2 = new Company(fullTimeArr, contractArr, 604);
-		System.out.println("~~~~~testing full constructors and setters~~~~~\n\n" + co2.toString());
+		System.out.println("~~~~~testing full constructors and getters/setters~~~~~\n\n" + co2.toString());
 	}
 
 }
